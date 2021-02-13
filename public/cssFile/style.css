@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.mainDiv {
+    background-color: #F3F3F3;
+    width: 100vw;
+    min-height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.loginDiv {
+    display: flex;
+    min-height: 447px;
+    justify-content: center;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-body > .loginImg {
+    background-image: url(../image/pos_Logo.png);
+    height: 68px;
+    width: 100px;
+    background-position: center;
+    border: 2px solid #0d6efd;
+    background-size: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card-body form {
+    width: 68%;
+} 
