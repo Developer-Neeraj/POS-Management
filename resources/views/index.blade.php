@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="{{ asset('cssFile/style.css') }}">
     <link rel="stylesheet" href="{{ asset('cssFile/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
 </head>
 <body>
     <nav class="navbar bg-white">
-        <button class="btn">Login</button>
+        <button class="btn">Admin Login</button>
     </nav>
     <div class="container-fluid mainDiv">
         <div class="container loginDiv">
@@ -20,17 +19,18 @@
                 <h4 class="bg-dark text-white text-center py-2">login</h4>
                 <div class="card-body">
                     <div class="loginImg"></div>
-                    <form action="" method="post">
+                    <form action="{{ route('admin.login') }}" method="post">
+                        @csrf
                         <div class="row mb-3">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">E-mail Address</label>
                             <div class="col-sm-9">
-                              <input type="email" class="form-control" id="inputEmail3">
+                              <input type="email" name="email" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
                             <div class="col-sm-9">
-                              <input type="password" class="form-control" id="inputPassword3">
+                              <input type="password" name="password" class="form-control" id="inputPassword3">
                             </div>
                         </div>
                         <div class="row mb-3">

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('login', 'index');
+Route::view('admin', 'index');
+
+Route::post('admin/dashboard', [AdminController::class, 'index'])->name('admin.login')->middleware('check_Login');
+
